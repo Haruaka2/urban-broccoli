@@ -8,11 +8,6 @@ export enum QuestionTypeEnum {
     MULTIPLE = "multiple",
     TORF = "boolean"
 }
-export enum CategoryEnum {
-    ANY = "any",
-    GENERAL = "",
-    BOOKS = "",
-}
 
 // Objects Related to the Associated API
 export type Configuration = {
@@ -25,8 +20,12 @@ export type OpenTriviaResponse = {
     response_code: number,
     results: Question[],
 }
+export type Category = {
+    id: number,
+    label: string
+}
 export type Question = {
-    category: string,
+    category: number, 
     type: QuestionTypeEnum,
     difficulty: DifficultyEnum,
     question: string,
