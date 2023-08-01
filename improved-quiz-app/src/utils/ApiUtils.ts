@@ -11,9 +11,9 @@ export const getTrivaQuestions = async (amt: number, category: number, difficult
     if(difficulty) diffStr = "difficulty=" + difficulty;
     if(qType) typeStr = "type=" + qType;
 
-    const url: string = "https://opentdb.com/api.php?" + amtStr + "&" + catStr + "&" +
+    const url: string = "/api.php?" + amtStr + "&" + catStr + "&" +
         diffStr + "&" + typeStr;
 
-    const result = await fetch(url).then(res => res).catch(err => console.log("ERROR: ", err));
+    const result = await fetch(url).then(res => res.json()).then(res => res.results).catch(err => console.log("ERROR: ", err));
     return result;
 }
