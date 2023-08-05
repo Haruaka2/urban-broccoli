@@ -1,5 +1,11 @@
 import { Category } from "../types/ApiTypes";
 
+export enum AppViewEnum {
+    QUIZ = "QUIZ",
+    SELECTION = "SELECTION",
+    RESULT = "RESULT"
+}
+
 export const ANY_CAT: Category = {
     id: 0,
     label: "Any Category"
@@ -102,7 +108,7 @@ export const VECH_CAT: Category = {
     label: "Vehicles"
 };
 
-export const categories: Category[] = [
+export const Q_CATEGORIES: Category[] = [
     ANY_CAT,
     GEN_CAT,
     BOOK_CAT,

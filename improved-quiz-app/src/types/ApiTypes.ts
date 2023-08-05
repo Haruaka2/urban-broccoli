@@ -1,10 +1,12 @@
 // Enums Related to the Associated API
 export enum DifficultyEnum {
+    ALL = "",
     EASY = "easy",
     MEDIUM = "medium",
     HARD = "hard"
 }
 export enum QuestionTypeEnum {
+    ALL = "",
     MULTIPLE = "multiple",
     TORF = "boolean"
 }
