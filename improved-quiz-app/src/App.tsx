@@ -17,18 +17,22 @@ const App: React.FC = () => {
 
   const setViewHandler = (val: string) => setView(val);
   const setQuestionsHandler = (val: Question[]) => setQuestions(val);
-
+  const setResultsHandler = (val: ResultsProps) => setResults(val);
+  
   const generateView = () => {
     switch(view) {
       case AppViewEnum.QUIZ:
         return <QuizView questions={questions}
                          results={results}
-                         setResults={setResults}/>
+                         setResults={setResultsHandler}
+                         setView={setViewHandler}/>
       case AppViewEnum.SELECTION:
         return <SelectionView setView={setViewHandler}
-                              setQuestions={setQuestionsHandler}/>
+                              setQuestions={setQuestionsHandler}
+                              setResults={setResultsHandler}/>
       case AppViewEnum.RESULT:
-        return <ResultView/>
+        return <ResultView results={results}
+                           setView={setViewHandler}/>
       default:
         return <></>
     }

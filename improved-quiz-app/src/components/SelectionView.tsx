@@ -11,11 +11,12 @@ import Select from '@mui/material/Select';
 import { SelectionViewProps } from '../types/UiTypes';
 import { Configuration, Category, DifficultyEnum, QuestionTypeEnum } from '../types/ApiTypes';
 import { AppViewEnum, Q_CATEGORIES } from '../utils/Constants';
-import { getTrivaQuestions } from '../utils/ApiUtils';
+import { getTrivaQuestions } from '../utils/GenUtils';
 
 const SelectionView: React.FC<SelectionViewProps> = ({
   setView,
   setQuestions,
+  setResults,
 }) => {
   const defaultConfig = {
     amount: 10,
@@ -33,7 +34,14 @@ const SelectionView: React.FC<SelectionViewProps> = ({
   const onSubmit = () => {
     console.log("WHAT IS CONFIG: ", config);
     Promise.resolve(getTrivaQuestions(config.amount, config.category, 
-      config.difficulty, config.type)).then(data => setQuestions(data));
+      config.difficulty, config.type)).then(data => {
+        setQuestions(data);
+        setResults({
+          correct: 0,
+          incorrect: 0,
+          total: data.length
+        });
+      });
     setView(AppViewEnum.QUIZ);
   }
 
@@ -89,6 +97,7 @@ const SelectionView: React.FC<SelectionViewProps> = ({
             <InputLabel> Question Type </InputLabel>
             <Select labelId="type-drpdwn-label"
                     id="type-drpdwn"
+                    disabled={true}
                     value={config.type}
                     onChange={e => onChange("type", e.target.value)}
                     label="Question Types">
