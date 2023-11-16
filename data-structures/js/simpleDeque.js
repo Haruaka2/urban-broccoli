@@ -1,16 +1,17 @@
 class SimpleDeque {
-    /*
-      constructor(elements) {
-    this._elements = Array.isArray(elements) ? elements : [];
-    this._offset = 0;
+  constructor(elements) {
+    this.elements = Array.isArray(elements) ? elements : [];
   }
-  */
-  // pushFront
-  // pushBack
-  // front
-  // back
-  // popFront
-  // popBack
-  // isEmpty
-  // size
+
+  pushFront(value) {}
+  pushBack(value) {}
+  front(){}
+  back(){}
+  popFront() {}
+  popBack() {}
+  isEmpty() {}
+  size() {}
+  clear() {}
+
+  printDeque() {}
 }

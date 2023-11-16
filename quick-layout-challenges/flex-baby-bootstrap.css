@@ -1,0 +1,37 @@
+/* Mimicing Bootstrap Layouts: https://themes.getbootstrap.com/preview/?theme_id=55961 */
+.content {
+  background-color: coral;
+}
+
+.main {
+  min-height: 100vh;
+  background-color: pink;
+}
+
+.imgBkground {
+  background-color: plum;
+}
+
+.about {
+  background-color:aqua;
+  min-height: 30vh;
+}
+
+.carousel {
+  min-height: 30vh;
+}
+
+.testimonials {
+  background-color: aquamarine;
+  min-height: 50vh;
+}
+
+.studio {
+  background-color: goldenrod;
+  min-height: 30vh;
+}
+
+.footer {
+  background-color: darkgray;
+  min-height: 30vh;
+}

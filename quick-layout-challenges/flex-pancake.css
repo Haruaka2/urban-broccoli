@@ -1,0 +1,46 @@
+/*
+Challenge URL: https://github.com/devchallenges/CSSGrid-Tutorial/tree/main
+Challenge Display: https://www.figma.com/proto/gPibJxL1JLvL3qKOwQfxok/CSS-Grid?node-id=1-2&viewport=551%2C-133%2C1.2567064762115479&scaling=min-zoom
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+/* === SET UP === */
+* {
+  box-sizing: border-box;
+}
+ul {
+  padding-left: 1.5rem;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: snow;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.item {
+  padding: 8px;
+  background-color: white;
+  border: 4px solid tomato;
+  border-radius: 6px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  margin-top: 1em;
+  height: 100%;
+}
+.height-50 {
+  height: 50vh;
+}
+
+/* === CHALLENGE STARTS HERE === */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 1px;
+  height:100vh;
+}
+.main {
+  flex-shrink: 1;
+}
+.bar {
+  flex-shrink: 4;
+}
