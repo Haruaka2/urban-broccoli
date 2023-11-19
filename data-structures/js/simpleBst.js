@@ -1,64 +1,61 @@
+class BstNode {
+  constructor (data, left = null, right = null) {
+    this.data = data;
+    this.left = left;
+    this.right = right;
+  }
+}
+
 class SimpleBst {
-  // https://github.com/orgs/datastructures-js/repositories?type=all
   constructor() {
-    // Use Node with Left and Right
+    this.root = null;
+  }
+
+  recursiveInsert(node, newNode) {
+    //right
+    if(newNode.data >= node) {
+
+    } else {
+      // left
+      if(node.left) {
+        // recusrive call;
+      } else {
+        node.left = newNode;
+      }
+    }
+  }
+  
+  insert(value) {
+    const newNode = new BstNode(value, null, null);
+    if(this.root) {
+        
+    } else {
+      this.root = newNode;
+    }
+  }
+  remove() {}
+  find() {}
+  min() {}
+  max() {}
+  root() {
+    return this.root;
+  }
+  traverseInOrder () {}
+  traversePreOrder () {}
+  traversePostOrder () {}
+  clear() {}
+
+  recursivePrint(value, bstNode, isLeft) {
+    if(bstNode != null) {
+      console.log(value + (isLeft ? "|-- " : "\\-- ") + bstNode.data);
+      print(value + (isLeft ? "|   " : "    "), bstNode.left, true);
+      print(value + (isLeft ? "|   " : "    "), bstNode.right, false);
+    }
   }
   printBst() {
+    this.recursivePrint("", root, false);
   }
-
-  // insert
-  // has
-  // hasKey
-  // find
-  // findKey
-  // min
-  // max
-/*
-lowerBound (floor)
-lowerBoundKey (floorKey)
-upperBound (ceil)
-upperBoundKey (ceilKey)
-root
-count
-traverseInOrder
-traversePreOrder
-traversePostOrder
-remove
-removeNode
-clear
-*/
-  /*
-      constructor(elements) {
-    this._elements = Array.isArray(elements) ? elements : [];
-    this._offset = 0;
-  }
-  */
-  // pushFront
-  // pushBack
-  // front
-  // back
-  // popFront
-  // popBack
-  // isEmpty
-  // size
 }
 
-/*
-public StringBuilder toString(StringBuilder prefix, boolean isTail, StringBuilder sb) {
-    if(right!=null) {
-        right.toString(new StringBuilder().append(prefix).append(isTail ? "│   " : "    "), false, sb);
-    }
-    sb.append(prefix).append(isTail ? "└── " : "┌── ").append(value.toString()).append("\n");
-    if(left!=null) {
-        left.toString(new StringBuilder().append(prefix).append(isTail ? "    " : "│   "), true, sb);
-    }
-    return sb;
-}
+const exampleTest = new SimpleBst();
 
-@Override
-public String toString() {
-    return this.toString(new StringBuilder(), true, new StringBuilder()).toString();
-}
-
-https://stackoverflow.com/questions/4965335/how-to-print-binary-tree-diagram-in-java
-*/
