@@ -1,16 +1,36 @@
 /* Mimicing Bootstrap Layouts: https://themes.getbootstrap.com/preview/?theme_id=55961 */
+.header {
+  min-height: 5em;
+  position: absolute;
+  z-index: 10;
+}
+.header li:hover {
+  border-bottom: 2px solid var(--info);
+}
+.header li:not(:last-child) {
+  margin-right: 2em;
+}
+
+
 .content {
   background-color: coral;
 }
 
-.main {
-  min-height: 100vh;
-  background-color: pink;
+.imgBkground {
+  max-height: 60em;
+  overflow: hidden;
+  background-image: url("./flex-baby-bs-imgs/dave-hoefler-4qWI3_-VgRY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.imgBkground {
-  background-color: plum;
+
+.main {
+  min-height: 100vh;
+  background-color: whitesmoke;
 }
+
 
 .about {
   background-color:aqua;
