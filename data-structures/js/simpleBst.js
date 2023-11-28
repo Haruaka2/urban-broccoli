@@ -37,9 +37,6 @@ class SimpleBst {
   }
 
   recursiveRemove(value, node) {
-    if(this.root.data === value) {
-      
-    }
 
   }
   remove(value) {
@@ -49,12 +46,78 @@ class SimpleBst {
       return;
     }
   }
-  traverseInOrder () {}
-  traversePreOrder () {}
-  traversePostOrder () {}
-  find() {}
-  min() {}
-  max() {}
+  
+  // Note: In-Order for BSTs returns the tree in sorted order
+  recursiveTraverseInOrder(node, arr) {
+    if(node === null) return;
+    this.recursiveTraverseInOrder(node.left, arr);
+    arr.push(node.data);
+    this.recursiveTraverseInOrder(node.right, arr);
+  }
+  traverseInOrder () {
+    let tempArr = [];
+    if(this.root) {
+      this.recursiveTraverseInOrder(this.root, tempArr);
+      console.log("IN-ORDER: ", tempArr.join(", "));
+    } else return;
+  }
+
+  recursiveTraversePreOrder(node, arr) {
+    if(node === null) return;
+    arr.push(node.data);
+    this.recursiveTraversePreOrder(node.left, arr);
+    this.recursiveTraversePreOrder(node.right, arr);
+  }
+  traversePreOrder () {
+    let tempArr = [];
+    if(this.root) {
+      this.recursiveTraversePreOrder(this.root, tempArr);
+      console.log("PRE-ORDER: ", tempArr.join(", "));
+    } else return;
+  }
+
+  recursiveTraversePostOrder(node, arr) {
+    if(node === null) return;
+    this.recursiveTraversePostOrder(node.left, arr);
+    this.recursiveTraversePostOrder(node.right, arr);
+    arr.push(node.data);
+  }
+  traversePostOrder () {
+    let tempArr = [];
+    if(this.root) {
+      this.recursiveTraversePostOrder(this.root, tempArr);
+      console.log("POST-ORDER: ", tempArr.join(", "));
+    } else return;
+  }
+
+  recursiveBstFind(node, value, isFound) {
+    if(isFound || node === null) return;
+    else {
+      if(node.data === value) isFound == true;
+
+      if(isFound) return;
+      else {
+        this.recursiveBstFind(node.left, value, isFound);
+        this.recursiveBstFind(node.right, value, isFound);
+      }
+    }
+  }
+  find(node, value) {
+    if(this.root === null) return false;
+    else {
+      let isFound = false;
+      this.recursiveBstFind(node, value, isFound);
+      return isFound;
+    }
+  }
+
+  min() {
+
+  }
+  max() {
+    
+  }
+
   root() {
     return this.root;
   }
@@ -89,3 +152,7 @@ exampleTest.insert(25);
 exampleTest.insert(1);
 exampleTest.insert(4);
 exampleTest.printBst();
+
+exampleTest.traverseInOrder();
+exampleTest.traversePreOrder();
+exampleTest.traversePostOrder();
