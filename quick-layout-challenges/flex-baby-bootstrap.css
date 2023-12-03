@@ -1,8 +1,15 @@
 /* Mimicing Bootstrap Layouts: https://themes.getbootstrap.com/preview/?theme_id=55961 */
+h2 {
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+
+/* HEADER */
 .header {
   min-height: 5em;
   position: absolute;
   z-index: 10;
+  margin-top: 10px;
 }
 .header li:hover {
   border-bottom: 2px solid var(--info);
@@ -11,47 +18,178 @@
   margin-right: 2em;
 }
 
-
-.content {
-  background-color: coral;
+/* FIRST ROW */
+.main {
+  min-height: 100vh;
+  background-color: whitesmoke;
 }
-
 .imgBkground {
-  max-height: 60em;
+  max-height: 100%;
+  max-width: 50%;
   overflow: hidden;
   background-image: url("./flex-baby-bs-imgs/dave-hoefler-4qWI3_-VgRY-unsplash.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-
-.main {
-  min-height: 100vh;
-  background-color: whitesmoke;
+.blueLine {
+  border-bottom: 5px solid var(--info);
+  max-width: 8em;
+  margin-bottom: 2em;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding-left: 4em;
+}
+.content h1 {
+  font-weight: 800;
+  font-size: 4rem;
 }
 
-
+/* SECOND ROW */
 .about {
-  background-color:aqua;
-  min-height: 30vh;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 20em;
+  text-align: justify;
 }
+.carousel {
+  max-height: 100vh;
+  overflow: hidden !important;
+}
+
+/* THIRD ROW */
+.testimonials {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 3em;
+  justify-content: center;
+}
+.testimonials h2 {
+  margin-bottom: 2em;
+}
+.testimonials .card-body {
+  padding: 5em;
+  min-height: 45vh;
+  box-shadow: 0 .625rem 1rem rgba(35,35,35,.1);
+}
+.testimonials .card-title {
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.testimonials .card-text {
+  color: var(--bs-secondary-color);
+  font-style: italic;
+  opacity: .8;
+  margin-bottom: 1em;
+}
+.card-author {
+  opacity: .7;
+  color: var(--bs-secondary-color);
+  font-weight: 500;
+  text-align: right;
+}
+
+/* FOURTH ROW */
+.studio {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: row;
+}
+.studio ul {
+  list-style: none;
+  padding-left: 1em;
+}
+.studio ul li:before {
+  content: '✓';
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--info);
+}
+.studioBkground {
+  max-height: 100%;
+  max-width: 45%;
+  overflow: hidden;
+  background-image: url("./flex-baby-bs-imgs/daniel-roe-lpjb_UMOyx8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.studioCntnt {
+  padding: 2em 4em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.studioBtn {
+  max-width: 15em;
+  margin-top: 1em;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #212529;;
+  color: white;
+}
+.mainFooterRow {
+  height: 20vh;
+  padding: 3em 25em 0 0;
+}
+.rightsFooterRow {
+  height: 10vh;
+  border-top: 2px solid white;
+  padding: 1em 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.logoCol {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  padding: 2em 0 0 20em;
+}
+.iconTray {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+}
+.iconTray div {
+  margin-right: 1em;
+}
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer a {
+  color: white;
+}
+
+
+
 
 .carousel {
   min-height: 30vh;
 }
 
-.testimonials {
-  background-color: aquamarine;
-  min-height: 50vh;
-}
 
-.studio {
-  background-color: goldenrod;
-  min-height: 30vh;
-}
 
-.footer {
-  background-color: darkgray;
-  min-height: 30vh;
-}
+
+

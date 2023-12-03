@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import * as Styles from '../utils/SxStyles';
 import { SelectionViewProps } from '../types/UiTypes';
 import { Configuration, Category, DifficultyEnum, QuestionTypeEnum } from '../types/ApiTypes';
 import { AppViewEnum, Q_CATEGORIES } from '../utils/Constants';
