@@ -1,0 +1,129 @@
+/*
+Notes: Color Palette - 
+#B01D49
+#132323
+#546459
+#A5AFB0
+
+https://colorhunt.co/palette/2040513b697884a9accae8d5
++ 
+
+https://colorhunt.co/palette/164863427d9d9bbec8ddf2fd
+https://colorhunt.co/palette/053b50176b8764ccc5eeeeee
+https://colorhunt.co/palette/002b5b2b4865256d858fe3cf
+*/
+
+h1, h2 {
+  color: #e1e1e1;
+}
+
+h3, h4, h5, h6, p, div, span {
+  color: #A5AFB0;
+}
+
+
+.main {
+  background-color: #132323;
+  min-height: 100vh;
+  padding: 8em 7em 5em 7em;
+}
+
+.line {
+  width: 100%;
+  height: 2em;
+  background-color: #132323;
+  border-bottom: #A5AFB0 solid 2px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.row {
+  margin-top: 5em;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 2em;
+  overflow: visible;
+}
+
+.row .sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 3em;
+  grid-column: 2 / span 4;
+  height: 50vh;
+}
+
+.row .content {
+  grid-column: 6 / span 6;
+}
+
+.sidebar h4 {
+  font-weight: 700;
+  color: #e1e1e1;
+  margin-bottom: 1.5em;
+}
+
+
+.navigation {
+  margin-bottom: 1em;
+  font-size: 1.5rem;
+}
+
+.navigation li {
+  line-height: normal;
+  margin-bottom: 1em;
+}
+.navigation li i {
+  margin-right: 10px;
+  width: 1em;
+}
+.navigation li:hover {
+  color: #d57ca1;
+  cursor: pointer;
+}
+.navigation li:hover > i {
+  color: #e1e1e1;
+  cursor: pointer;
+}
+
+
+
+
+.content h3{
+  color: #e1e1e1;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+
+
+
+
+.test {
+  min-height: 100vh;
+}
+
+.card-overlay {
+  background: rgb(0 0 0 / 32%);
+  height: 100vh;
+  z-index: 15;
+  position: relative;
+}
+
+.center-text {
+  position: fixed;
+  z-index: 16;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+  margin-left: 7em;
+}
+.center-text h1 h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
