@@ -33,7 +33,6 @@ const SelectionView: React.FC<SelectionViewProps> = ({
     [key]: val
   });
   const onSubmit = () => {
-    console.log("WHAT IS CONFIG: ", config);
     Promise.resolve(getTrivaQuestions(config.amount, config.category, 
       config.difficulty, config.type)).then(data => {
         setQuestions(data);
@@ -49,6 +48,10 @@ const SelectionView: React.FC<SelectionViewProps> = ({
   return (<>
     <Container maxWidth={false}>
       <Grid container spacing={2}>
+        <Grid item xs={12} sx={Styles.header}>
+          <h1> The Challenge Yourself Quiz</h1>
+        </Grid>
+
         <Grid item xs={12}>
           <TextField id="outlined-basic" 
                      label="Amount of Questions" 

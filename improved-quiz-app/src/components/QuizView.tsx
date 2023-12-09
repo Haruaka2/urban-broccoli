@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import { Button, Typography } from '@mui/material';
+
 import { AnswerProps, QuizViewProps } from '../types/UiTypes';
 import { DifficultyEnum, Question, QuestionTypeEnum} from '../types/ApiTypes';
-import { Button } from '@mui/material';
-import QuestionCard from './QuestionCard';
 import { AppViewEnum } from '../utils/Constants';
+import QuestionCard from './QuestionCard';
+import * as Styles from '../utils/SxStyles';
 
 const QuizView: React.FC<QuizViewProps> = ({
   questions,
@@ -66,19 +68,21 @@ const QuizView: React.FC<QuizViewProps> = ({
           <Container maxWidth={false}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <p>{num} / {results.total}</p>
+                <Typography variant="h5" sx={Styles.qNumStyle}>
+                  {num} / {results.total}
+                </Typography>
               </Grid>
+
               <QuestionCard current={currentQ}
                             setSelected={setSelected}/>
-              <Grid item xs={12}>
+              <Grid item xs={12} sx={Styles.buttonRow}>
                 {
-                  num < results.total ? <Button variant="contained" onClick={onSubmit}>
+                  num < results.total ? <Button variant="contained" fullWidth={true} onClick={onSubmit}>
                   Submit
-                  </Button> : <Button variant="contained" onClick={onComplete}>
+                  </Button> : <Button variant="contained" fullWidth={true} onClick={onComplete}>
                   Finish
                   </Button>
                 }
-                
               </Grid>
             </Grid>
           </Container>

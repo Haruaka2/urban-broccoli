@@ -1,9 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import Grid from '@mui/material/Grid';
-import { Question } from '../types/ApiTypes';
+
 import { QuestionProps, AnswerProps } from '../types/UiTypes';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { shuffleArray } from '../utils/GenUtils';
+import * as Styles from '../utils/SxStyles';
 
 const QuestionCard: React.FC<QuestionProps> = ({
     current,
@@ -45,13 +46,15 @@ const QuestionCard: React.FC<QuestionProps> = ({
   if(answers.length > 0) {
     return (<>
       <Grid item xs={12}>
-        <span>{current.question}</span>
+        <Typography variant="h5" sx={Styles.qTypography}>{current.question}</Typography>
       </Grid>
       {
         answers.map(ans => {
-          return <Grid item xs={12}>
+          return <Grid item xs={6}>
             <Button variant={ans.isSelected ? "contained" : "outlined"} 
-                    onClick={() => onSelect(ans)}>
+                    onClick={() => onSelect(ans)}
+                    color="secondary"
+                    fullWidth={true}>
               {ans.text}
             </Button>
           </Grid>

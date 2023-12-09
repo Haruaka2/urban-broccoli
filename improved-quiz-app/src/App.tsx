@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import "./global.css";
+
+import { ResultsProps } from './types/UiTypes';
 import { Question } from './types/ApiTypes';
 import { AppViewEnum } from './utils/Constants';
 import QuizView from './components/QuizView';
 import SelectionView from './components/SelectionView';
 import ResultView from './components/ResultView';
-import { ResultsProps } from './types/UiTypes';
 import * as Styles from "./utils/SxStyles";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import "./global.css";
+
 
 const customTheme = createTheme({
   palette: {
