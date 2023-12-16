@@ -1,5 +1,4 @@
 # Transcribed from a seperate location. May have errors during transcription.
-
 class LlNode:
     def __init__(self, value, nextVal):
         self.value = value;

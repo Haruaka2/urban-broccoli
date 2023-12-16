@@ -36,9 +36,22 @@ h3, h4, h5, h6, p, div, span {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 2;
 }
-
-.row {
+.inner-line {
+  width: 100%;
+  height: 2em;
+  border-bottom: #e1e1e1 solid 2px;
+}
+.inner-line-caret {
+  display: flex;
+  justify-content: center;
+  height: 2em;
+  align-items: center;
+  font-size: 24px;
+  color: #e1e1e1;
+}
+.wrapper {
   margin-top: 5em;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -46,30 +59,74 @@ h3, h4, h5, h6, p, div, span {
   overflow: visible;
 }
 
-.row .sidebar {
-  position: -webkit-sticky;
+.wrapper .sidebar {
   position: sticky;
   top: 3em;
-  grid-column: 2 / span 4;
-  height: 50vh;
+  grid-column: 1 / span 4;
+  height: 80vh;
+  z-index: 0;
+  overflow: hidden;
 }
 
-.row .content {
-  grid-column: 6 / span 6;
+.wrapper .content {
+  grid-column: 5 / span 7;
 }
 
 .sidebar h4 {
   font-weight: 700;
   color: #e1e1e1;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 
+.extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+}
+.circle-wrapper {
+  width: 15em;
+  height: 15em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.circle-wrapper img {
+  display: inline;
+  margin: 0 auto;
+  margin-left: -25%; 
+  height: 100%;
+  width: auto;
+}
+.icons ul {
+  list-style-type: none;
+}
+.icons li {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #A5AFB0;
+  height: 2em;
+  width: 2em;
+  padding: 0 auto;
+  border-radius: 50em;
+  color: #132323;
+  text-align: center;
+  padding: 0.5em;
+}
+.icons li:hover {
+  background-color: #d57ca1;
+  cursor: pointer;
+}
+.icons li:hover > i {
+  color: #e1e1e1;
+  cursor: pointer;
+}
 .navigation {
+  margin-top: 1.5em;
   margin-bottom: 1em;
   font-size: 1.5rem;
 }
-
 .navigation li {
   line-height: normal;
   margin-bottom: 1em;
@@ -93,9 +150,18 @@ h3, h4, h5, h6, p, div, span {
 .content h3{
   color: #e1e1e1;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
-
+.content p {
+  line-height: normal;
+}
+.section .col {
+  padding: 0 !important;
+}
+/* Remove height tag after mocking data*/
+.section p {
+  margin-bottom: 4em;
+}
 
 
 
