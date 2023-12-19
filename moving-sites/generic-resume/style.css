@@ -1,0 +1,65 @@
+/** Initalization **/
+:root {
+    --main: #C69774;
+    --secondary: #637E76;
+    --tertiary: #F8DFD4;
+    --ascent: #FFEFE8;
+    --white: #f0eded;
+    --black: #3b3a3a;
+}
+html {
+    overflow: hidden;
+    height: 100%;
+}
+body {
+    overflow: auto;
+    height: 100%;
+    overscroll-behavior: none;
+}
+
+/** Header **/
+header {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1em;
+}
+header ul {
+    list-style-type: none;
+}
+header li {
+    margin-right: 1em;
+    display: inline-block;
+}
+
+/** Expanded Image + About Section **/
+section {
+    height: 70vh;
+    text-align: center;
+    padding: 4em;
+    margin: auto 0;
+}
+.intro {
+    height: 100vh;
+    background-color: var(--main);
+}
+.icons ul {
+    margin-top: 1em;
+    list-style-type: none;
+}
+.icons li {
+    margin-right: 1em;
+    display: inline-block;
+}
+
+
+/** Skills + Testimonials**/
+
+
+/** Resume **/
+
+/** Contact + Footer **/
+footer {
+    min-height: 10em;
+    background-color: var(--black);
+}
