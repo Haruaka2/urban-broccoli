@@ -1,7 +1,7 @@
 const fizzBuzz = (num) => {
     let tempArr = [],
         count = 0;
-    
+
     while(count < num) {
         if(count % 3 === 0) {
             if(count % 5 === 0) {
@@ -15,4 +15,6 @@ const fizzBuzz = (num) => {
             tempArr.push(count);
         }
     }
+
+    return tempArr;
 }

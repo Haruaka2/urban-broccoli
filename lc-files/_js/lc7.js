@@ -5,7 +5,7 @@ const reverseInt = (num) => {
     if(revNum > 2147483648 || revNum < -2147483648) {
         return 0;
     } else {
-        return isNumNeg ? -1 * parseInt(revNum) : parseInt(revNum);
+        return isNumNeg ? -1 * revNum : revNum;
     }
 }
 

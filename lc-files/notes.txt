@@ -1,10 +1,9 @@
-// mergeKSortedLists
-// longestSubstrWithouRepeatCharas
-// longestPalindromeStr
-//validParenthesis
+// Rotate Arrays (https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/)
+// Contains Duplicates (https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/)
 
-
-
-
-// Write a function to find the longest common prefix string amongst an array of strings.
-//If there is no common prefix, return an empty string "".
+// First Unique Character In a String (https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/881/)
+// mergeKSortedLists (https://leetcode.com/problems/merge-k-sorted-lists/)
+// Remove Element From Arr (https://leetcode.com/problems/remove-element/?envType=study-plan-v2&envId=top-interview-150)
+// Remove Dupes from Sorted Arr (https://leetcode.com/problems/remove-duplicates-from-sorted-array/?envType=study-plan-v2&envId=top-interview-150)
+// Maximum Subarray (https://leetcode.com/problems/maximum-subarray/?envType=study-plan-v2&envId=top-interview-150)
+// Detect Capitals (https://leetcode.com/problems/detect-capital/description/)
