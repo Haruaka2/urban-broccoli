@@ -13,15 +13,15 @@ const myPowSol = (num, pow) => {
     }
 }
 
-const recursivePow = (x, n) => {
+const recursivePow = (num, power) => {
     if(num === 0) return 0;
     else if (power === 0) return 1;
     else if (power === 1) return num;
 
-    const halfPow = Math.floor(n / 2);
+    const halfPow = Math.floor(num / 2);
     const halfRes = recursivePow(num, halfPow);
     const res = halfRes * halfRes;
-    return n % 2 === 0 ? res : res * x;
+    return power % 2 === 0 ? res : res * num;
 }
 const myRecursivePow = (x, n) => {
     const result = recursivePow(x, Math.abs(n));
