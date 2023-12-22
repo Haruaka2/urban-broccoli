@@ -11,7 +11,7 @@ public class lc14 {
             // Get shortest length
             int shortestStrLen = arr[0].length();
             for(int i = 0; i < arr.length; i++) {
-                if(arr[i].length() > shortestStrLen) {
+                if(arr[i].length() < shortestStrLen) {
                     shortestStrLen = arr[i].length();
                 }
             }
